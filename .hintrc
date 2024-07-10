@@ -10,5 +10,13 @@
     "not edge <= 125",
     "not opera <= 110",
     "not samsung <= 25"
-  ]
+  ],
+  "hints": {
+    "axe/forms": [
+      "default",
+      {
+        "select-name": "off"
+      }
+    ]
+  }
 }
