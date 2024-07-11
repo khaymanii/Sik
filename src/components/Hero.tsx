@@ -1,4 +1,16 @@
+"use client";
+
 import React from "react";
+import Slider from "react-slick";
+import Slide from "./Slide";
+
+interface slideData {
+  id: number;
+  img: string;
+  title: string;
+  mainTitle: string;
+  price: string;
+}
 
 export default function Hero() {
   let settings = {
@@ -10,7 +22,7 @@ export default function Hero() {
     pauseOnHover: false,
   };
 
-  const slideData = [
+  const slideData: slideData[] = [
     {
       id: 0,
       img: "/banner-1.jpg",
@@ -33,5 +45,21 @@ export default function Hero() {
       price: "$10",
     },
   ];
-  return <div>Hero</div>;
+  return (
+    <div>
+      <div className="container pt-6 lg:pt-0">
+        <Slider {...settings}>
+          {slideData.map((item) => (
+            <Slide
+              key={item.id}
+              img={item.img}
+              title={item.title}
+              mainTitle={item.mainTitle}
+              price={item.price}
+            />
+          ))}
+        </Slider>
+      </div>
+    </div>
+  );
 }
