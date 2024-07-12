@@ -52,6 +52,20 @@ const productsData: productsData[] = [
     rating: 5,
     price: "40.00",
   },
+  {
+    img: "/image7.jpg",
+    title: "Black Sunglass",
+    desc: "Rayban Sunglass",
+    rating: 5,
+    price: "45.00",
+  },
+  {
+    img: "/image8.jpg",
+    title: "Cap",
+    desc: "Advanti Cap",
+    rating: 5,
+    price: "20.00",
+  },
 ];
 
 export default function NewProducts() {
