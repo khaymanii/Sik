@@ -20,7 +20,7 @@ export default function ProductCard({
     switch (rating) {
       case 1:
         return (
-          <div>
+          <div className="flex gap-1 text-[20px] text-[#FF9529]">
             <AiFillStar />
             <AiOutlineStar />
             <AiOutlineStar />
@@ -30,7 +30,7 @@ export default function ProductCard({
         );
       case 2:
         return (
-          <div>
+          <div className="flex gap-1 text-[20px] text-[#FF9529]">
             <AiFillStar />
             <AiFillStar />
             <AiOutlineStar />
@@ -40,7 +40,7 @@ export default function ProductCard({
         );
       case 3:
         return (
-          <div>
+          <div className="flex gap-1 text-[20px] text-[#FF9529]">
             <AiFillStar />
             <AiFillStar />
             <AiFillStar />
@@ -50,7 +50,7 @@ export default function ProductCard({
         );
       case 4:
         return (
-          <div>
+          <div className="flex gap-1 text-[20px] text-[#FF9529]">
             <AiFillStar />
             <AiFillStar />
             <AiFillStar />
@@ -60,7 +60,7 @@ export default function ProductCard({
         );
       case 5:
         return (
-          <div>
+          <div className="flex gap-1 text-[20px] text-[#FF9529]">
             <AiFillStar />
             <AiFillStar />
             <AiFillStar />
@@ -71,17 +71,19 @@ export default function ProductCard({
     }
   };
   return (
-    <div>
-      <div>
+    <div className="px-4 border border-gray-200 rounded-xl max-w-[400px]">
+      <div className="w-full h-auto">
         <Image src={img} width={200} height={300} alt={title} />
       </div>
-      <div>
-        <h2>{title}</h2>
-        <p>{desc}</p>
+      <div className="space-y-2 py-2">
+        <h2 className="text-pink-500 uppercase font-medium">{title}</h2>
+        <p className="text-gray-500 max-w-[150px]">{desc}</p>
         <div>{generateRating(rating)}</div>
-        <div>
+        <div className="font-bold flex gap-4">
           ${price}
-          <del>${parseInt(price) + 50}.00</del>
+          <del className="text-gray-500 font-normal">
+            ${parseInt(price) + 50}.00
+          </del>
         </div>
       </div>
     </div>

@@ -11,69 +11,70 @@ interface productsData {
 
 const productsData: productsData[] = [
   {
-    img: "/image1.png",
-    title: "Nike Black",
-    desc: "Nike Black Sneaker",
-    rating: 4,
-    price: "50.00",
-  },
-  {
-    img: "/image2.png",
-    title: "Nike White",
-    desc: "Nike White Sneaker",
-    rating: 4,
-    price: "40.00",
-  },
-  {
-    img: "/image3.png",
-    title: "Leather Bag",
-    desc: "Brown Leather Bag",
-    rating: 4,
-    price: "70.00",
-  },
-  {
-    img: "/image4.png",
-    title: "Crotchet",
-    desc: "Balenciaga White Crotchet",
-    rating: 3,
-    price: "55.00",
-  },
-  {
     img: "/image5.png",
     title: "Cooperate Heel",
-    desc: "Flower Design Cooperate Heel For Women",
+    desc: "Flower Design",
     rating: 5,
     price: "80.00",
   },
   {
-    img: "/image6.png",
-    title: "Black Pullover",
-    desc: "All Black Pullover With No Hoody",
+    img: "/image5.png",
+    title: "Cooperate Heel",
+    desc: "Flower Design",
     rating: 5,
-    price: "40.00",
+    price: "80.00",
   },
   {
-    img: "/image7.png",
-    title: "Black Sunglass",
-    desc: "Rayban Sunglass",
+    img: "/image5.png",
+    title: "Cooperate Heel",
+    desc: "Flower Design",
     rating: 5,
-    price: "45.00",
+    price: "80.00",
+  },
+
+  {
+    img: "/image5.png",
+    title: "Cooperate Heel",
+    desc: "Flower Design",
+    rating: 5,
+    price: "80.00",
   },
   {
-    img: "/image8.png",
-    title: "Cap",
-    desc: "Advanti Cap",
+    img: "/image5.png",
+    title: "Cooperate Heel",
+    desc: "Flower Design",
     rating: 5,
-    price: "20.00",
+    price: "80.00",
+  },
+  {
+    img: "/image5.png",
+    title: "Cooperate Heel",
+    desc: "Flower Design",
+    rating: 5,
+    price: "80.00",
+  },
+  {
+    img: "/image5.png",
+    title: "Cooperate Heel",
+    desc: "Flower Design",
+    rating: 4,
+    price: "80.00",
+  },
+  {
+    img: "/image5.png",
+    title: "Cooperate Heel",
+    desc: "Flower Design",
+    rating: 5,
+    price: "80.00",
   },
 ];
 
 export default function NewProducts() {
   return (
     <div>
-      <div>
-        <h2>New Products</h2>
-        <div>
+      <div className="container pt-16">
+        <h2 className="font-medium text-2xl pb-4">New Products</h2>
+        <div className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-col-3 xl:grid-cols-4 gap-10 xl:gap-x-20 xl:gap-y-10">
           {productsData.map((item, index) => {
             return (
               <ProductCard
